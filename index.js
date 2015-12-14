@@ -15,6 +15,9 @@ const _transformCSV = function _transformCSV(inputCSV, latCol, lonCol, fromProje
 
             csv.transform(data, function(row){
 
+                if( isNaN(parseInt(row[lonCol])) || isNaN(parseInt(row[latCol]))) // Skip, probably headers
+                    return row;
+
                 const originalLonLat = [row[lonCol], row[latCol]];
                 let transformedLonLat;
 
