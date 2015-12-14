@@ -44,13 +44,16 @@ if( ! config.latCol ) {
 
 try {
 
+    console.log('Reading from ', config.inputPath);
     const inputData = fs.readFileSync(config.inputPath);
 
+    console.log('Converting...');
     converter.transformCSV(inputData, config.latCol, config.lonCol, config.originalProjection, config.finalProjection)
         .then((convertedCSV) => {
 
             try {
                 //console.log(convertedCSV);
+                console.log('Writing reuslt to', config.outputPath);
                 fs.writeFileSync(config.outputPath, convertedCSV);
             }
             catch(err) {
