@@ -1,0 +1,23 @@
+{
+  "name": "node-csv-crs-converter",
+  "version": "1.0.0",
+  "description": "This module parses a csv file and converts columns latitude and longitude between different CRS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andreacalia/node-csv-crs-converter.git"
+  },
+  "author": "Andrea Calia",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/andreacalia/node-csv-crs-converter/issues"
+  },
+  "homepage": "https://github.com/andreacalia/node-csv-crs-converter#readme",
+  "dependencies": {
+    "csv": "^0.4.6",
+    "proj4": "^2.3.12"
+  }
+}
