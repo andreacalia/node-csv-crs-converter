@@ -50,8 +50,8 @@ try {
         .then((convertedCSV) => {
 
             try {
-                console.log(convertedCSV);
-                //fs.writeFileSync(config.outputPath, convertedCSV);
+                //console.log(convertedCSV);
+                fs.writeFileSync(config.outputPath, convertedCSV);
             }
             catch(err) {
                 console.error('Error writing data to ', config.outputPath, ': ', err);
